@@ -13,14 +13,19 @@ router.get("/api/items", itemActions.browse);
 router.get("/api/items/:id", itemActions.read);
 router.post("/api/items", itemActions.add);
 
+import programActions from "./modules/program/programActions";
+
+router.get("/api/programs", programActions.browse);
+router.get("/api/programs/:id", programActions.read)
+
 import sayAction from "./modules/say/sayActions";
 
 router.get("/", sayAction.sayWelcome);
 
-import browse from "./modules/program/programActions";
-import programActions from "./modules/program/programActions";
+import categoryActions from "./modules/category/categoryActions";
 
-router.get("/api/programs", programActions.browse);
+router.get("/api/categories", categoryActions.browse2);
+router.get("/api/categories/:id", categoryActions.read2)
 
 /* ************************************************************************* */
 
