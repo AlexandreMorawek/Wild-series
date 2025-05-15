@@ -2,6 +2,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router";
+import Series from "./pages/programs";
 
 /* ************************************************************************* */
 
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: "/", // The root path
     element: <App />, // Renders the App component for the home page
+  },
+  {
+    path: "/programs",
+    element: <Series />,
   },
   // Try adding a new route! For example, "/about" with an About component
 ]);
