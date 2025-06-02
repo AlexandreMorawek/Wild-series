@@ -10,7 +10,7 @@ const categories = [
   {
     id: 3,
     name: "Action",
-  }
+  },
 ];
 
 import type { RequestHandler } from "express";
@@ -18,7 +18,7 @@ import type { RequestHandler } from "express";
 const browse2: RequestHandler = (req, res) => {
   if (req.query.q != null) {
     const filteredCategories = categories.filter((category) =>
-      category.name.includes(req.query.q as string)
+      category.name.includes(req.query.q as string),
     );
 
     res.json(filteredCategories);
@@ -34,7 +34,7 @@ const read2: RequestHandler = (req, res) => {
   if (category != null) {
     res.json(category);
   } else {
-    res.sendStatus(404)
+    res.sendStatus(404);
   }
 };
 
